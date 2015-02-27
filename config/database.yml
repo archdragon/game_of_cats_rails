@@ -84,4 +84,4 @@ production:
   <<: *default
   database: cat_production
   username: cat_production
-  password: <%= ENV['CAT_DATABASE_PASSWORD'] %>
+  password: <%= File.read("/home/deployer/apps/notekat/shared/database_password") if Rails.env.production? %>
