@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Cat
+    = stylesheet_link_tag 'application', madia: 'all'
+    = javascript_include_tag 'application'
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand href="/" Game of Cats
+    = yield
