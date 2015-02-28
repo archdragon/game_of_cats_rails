@@ -1,14 +1,30 @@
 #cat-create.row
-  .col-sm4.cat
-  .col-sm4.settings
+  .col-sm-4.cat
+    img.setting-image-fur src="/public_images/appearance/fur/0.png"
+    img.setting-image-eyes src="/public_images/appearance/eyes/0.png"
+  .col-sm-4.settings
     .setting.setting-eyes
       button.btn.btn-default.btn-left &laquo;
       .name Eyes
       button.btn.btn-default.btn-right &raquo;
       .clearfix
+      input.selected-eyes type="hidden" value="0"
     .setting.setting-fur
       button.btn.btn-default.btn-left &laquo;
       .name Fur
       button.btn.btn-default.btn-right &raquo;
       .clearfix
+      input.selected-fur type="hidden" value="0"
 
+.row
+  .col-sm-8
+    = bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      f.text_field :name
+      f.text_field :password
+      f.text_field :password_confirmation
+      f.submit
+
+    =bootstrap_form_for(:user, :url => session_path(:user)) do |f|
+      = f.text_field :name
+    | Cat name:
+    input type="text" value="Mr. Mittens"
