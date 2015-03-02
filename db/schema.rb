@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228231233) do
+ActiveRecord::Schema.define(version: 20150302141455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cats", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "fur",        default: 0
+    t.integer  "eyes",       default: 0
+    t.integer  "face",       default: 0
+    t.integer  "energy",     default: 100
+    t.integer  "interest1",  default: 0
+    t.integer  "interest2",  default: 0
+    t.integer  "interest3",  default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
