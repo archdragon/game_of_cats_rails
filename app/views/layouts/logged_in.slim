@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Cat
+    = stylesheet_link_tag 'application', madia: 'all'
+    = javascript_include_tag 'application'
+  body
+    nav.navbar.navbar-inverse
+      .container
+        .navbar-header
+          a.navbar-brand href="/" Game of Cats
+          .pull-right
+            = link_to('Logout', destroy_user_session_path, :method => :delete)
+    .container
+      = yield
