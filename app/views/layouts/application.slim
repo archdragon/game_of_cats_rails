@@ -5,9 +5,11 @@ html
     = stylesheet_link_tag 'application', madia: 'all'
     = javascript_include_tag 'application'
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top
+    nav.navbar.navbar-inverse
       .container
         .navbar-header
           a.navbar-brand href="/" Game of Cats
+        ul.nav.navbar-nav.navbar-right
+          li = link_to('Log in!', new_user_session_path)
     .container
       = yield
