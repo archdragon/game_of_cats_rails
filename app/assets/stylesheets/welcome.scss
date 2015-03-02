@@ -20,3 +20,24 @@
     float: left;
   }
 }
+
+#cat-create .cat-appearance {
+  position: relative;
+  min-height: 200px;
+}
+
+#cat-create .cat img {
+  position: absolute;
+}
+
+.setting-image-eyes {
+  z-index: 3;
+}
+
+.setting-image-face {
+  z-index: 2;
+}
+
+.setting-image-fur {
+  z-index: 1;
+}
