@@ -32,3 +32,11 @@ $(document).ready(function(){
     change_setting("face", 1, 2);
   });
 });
+
+$(document).ready(function(){
+  $("#continue-button").click(function(){
+    $("#continue-button").hide();
+    $("#hidden-fields").slideDown();
+    $("#hidden-form-button").fadeIn();
+  });
+})
