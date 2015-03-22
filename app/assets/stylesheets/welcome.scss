@@ -81,3 +81,12 @@
 h1 {
   text-align: center;
 }
+
+#hidden-fields, #hidden-form-button {
+  display: none;
+}
+
+.registration-form {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
