@@ -29,27 +29,18 @@
   .row
     .col-sm-4.col-sm-offset-4.registration-form
       fieldset
-        legend Names and things
         .form-group
           label Cat name
-          input.form-control type="text" value="Mr. Mittens"
+          input.form-control type="text" value="Mr. Mittens" name="cat_name"
+        .form-group.text-center
+          button#continue-button.btn.btn-lg.btn-success type="button" Continue &raquo;
+      #hidden-fields
         = f.text_field :name
         .row
           .col-xs-6
             = f.text_field :password
           .col-xs-6
             = f.text_field :password_confirmation
-  .row
-    .col-sm-4.col-sm-offset-4
+  #hidden-form-button.row
+    .col-sm-4.col-sm-offset-4.text-center
       = f.submit(class: "btn btn-lg btn-primary", value: "Create Cat!")
-
-
-.row
-  .col-sm-8
-    
-
-
-    =bootstrap_form_for(:user, :url => session_path(:user)) do |f|
-      = f.text_field :name
-    | Cat name:
-    input type="text" value="Mr. Mittens"
