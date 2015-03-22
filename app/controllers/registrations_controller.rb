@@ -6,14 +6,8 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    @cat_name = BeastElement.find_by_allowed_code_name(params[:element])
-
     super
-
-    if @user.persisted?
-      @beast = Beast.new(name: "Dragon", element: @beast_element.id, user: @user)
-      @beast.save
-    end
+    CreateFirstCatService.call(name: params[:cat_name], user: resource)
   end
 
   def update
