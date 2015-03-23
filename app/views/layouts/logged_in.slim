@@ -4,12 +4,14 @@ html
     title Cat
     = stylesheet_link_tag 'application', madia: 'all'
     = javascript_include_tag 'application'
+    = csrf_meta_tags
   body
     nav.navbar.navbar-inverse
       .container
         .navbar-header
           a.navbar-brand href="/" Game of Cats
-          .pull-right
-            = link_to('Logout', destroy_user_session_path, :method => :delete)
+        ul.nav.navbar-nav.navbar-right
+          li 
+            = link_to('Logout <span class="glyphicon glyphicon-log-out"></span>'.html_safe, destroy_user_session_path, :method => :delete)
     .container
       = yield
