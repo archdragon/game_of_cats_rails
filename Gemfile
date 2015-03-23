@@ -6,10 +6,11 @@ gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets and SLIM for templates
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'slim'
 gem 'bootstrap_form'
+ gem 'compass-rails', github: "Compass/compass-rails"
 
 gem 'tzinfo-data'
 
