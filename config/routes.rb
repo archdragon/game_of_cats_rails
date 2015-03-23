@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   # resource :city
-  resources :user_cats
+  resources :user_cats, path: 'cats'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
