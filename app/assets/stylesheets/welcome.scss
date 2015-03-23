@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 .setting {
   clear: both;
   margin-bottom: 1em;
@@ -89,4 +91,21 @@ h1 {
 .registration-form {
   margin-top: 25px;
   margin-bottom: 25px;
+}
+
+#cat-name-reload {
+  cursor: pointer;
+  &:hover span {
+    @include transform(rotate(270deg));
+    @include transition(transform 0.3s ease-in-out);
+
+  }
+  span {
+    display: inline-block;
+    @include transition(transform 0.3s ease-in-out);
+  }
+  span:active, &:active {
+    background-color: #dfdfdf;
+  }
+  
 }
