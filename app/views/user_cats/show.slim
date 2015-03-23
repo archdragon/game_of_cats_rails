@@ -14,3 +14,6 @@
 .row
   .col-sm-12
     h2 Interests
+    ul
+      - (1..3).each do |n|
+        li = t("interests.#{@cat.interest(n)}")
