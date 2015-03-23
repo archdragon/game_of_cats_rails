@@ -31,7 +31,10 @@
       fieldset
         .form-group
           label Cat name
-          input.form-control type="text" value="Mr. Mittens" name="cat[name]"
+          .input-group
+            input.form-control type="text" value="Mr. Mittens" name="cat[name]"
+            span class="input-group-addon" id="cat-name-reload"
+              span.glyphicon.glyphicon-refresh
         .form-group.text-center
           button#continue-button.btn.btn-lg.btn-success type="button" Continue &raquo;
       #hidden-fields
