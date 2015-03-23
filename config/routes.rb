@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   # resource :city
   resources :user_cats, path: 'cats'
+  resources :missions
+  resources :trainings
+  resources :journeys
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
