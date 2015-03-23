@@ -11,19 +11,19 @@
         .name Eyes
         button.btn.btn-default.btn-right type="button" &raquo;
         .clearfix
-        input.selected-eyes type="hidden" value="0"
+        input.selected-eyes name="cat[eyes]" type="hidden" value="0"
       .setting.setting-fur
         button.btn.btn-default.btn-left type="button" &laquo;
         .name Fur
         button.btn.btn-default.btn-right type="button" &raquo;
         .clearfix
-        input.selected-fur type="hidden" value="0"
+        input.selected-fur name="cat[fur]" type="hidden" value="0"
       .setting.setting-face
         button.btn.btn-default.btn-left type="button" &laquo;
         .name Face
         button.btn.btn-default.btn-right type="button" &raquo;
         .clearfix
-        input.selected-face type="hidden" value="0"
+        input.selected-face name="cat[face]" type="hidden" value="0"
 
 
   .row
@@ -31,7 +31,7 @@
       fieldset
         .form-group
           label Cat name
-          input.form-control type="text" value="Mr. Mittens" name="cat_name"
+          input.form-control type="text" value="Mr. Mittens" name="cat[name]"
         .form-group.text-center
           button#continue-button.btn.btn-lg.btn-success type="button" Continue &raquo;
       #hidden-fields
