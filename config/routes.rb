@@ -10,7 +10,16 @@ Rails.application.routes.draw do
   resources :user_cats, path: 'cats'
   resources :missions
   resources :trainings
-  resources :journeys
+  resources :journeys, only: [:index] do
+    collection do
+      post 'start', as: 'start'
+    end
+  end
+  resources :items, only: [:index] do
+    collection do
+      post 'eat', as: 'eat'
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
