@@ -1,5 +1,6 @@
 class TrainingsController < ApplicationController
   layout "logged_in"
+
   def index
     @trainings = Training.all
     @trainings.map! { |training| CatTraining.new(cat: current_cat, training: training) }
