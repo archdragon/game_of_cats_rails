@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   def email_required?
     false
   end
+
+  def current_cat
+    self.user_cats.first
+  end
 end
