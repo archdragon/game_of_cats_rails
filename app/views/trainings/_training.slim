@@ -1,0 +1,9 @@
+= form_for(training, url: start_training_path(training), method: 'post') do |f|
+  .row
+    .col-sm-3
+      strong = training.name
+    .col-sm-3
+      | Cost: 
+      = training.cost
+    .col-sm-3
+      = f.submit "Start training!", class: "btn btn-default"
