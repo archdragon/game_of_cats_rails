@@ -1,0 +1,9 @@
+- id: 1
+  name: 'Training 1'
+  attribute_id: 1
+- id: 2
+  name: 'Training 2'
+  attribute_id: 2
+- id: 3
+  name: 'Training 3'
+  attribute_id: 3
