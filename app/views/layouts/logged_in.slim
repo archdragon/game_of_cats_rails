@@ -11,11 +11,20 @@ html
         .navbar-header
           a.navbar-brand href="/" Game of Cats
         ul.nav.navbar-nav
+          li = link_to('Cat', user_cat_path(current_cat))
           li = link_to('Training', trainings_path)
           li = link_to('Journey', journeys_path)
           li = link_to('Missions', missions_path)
         ul.nav.navbar-nav.navbar-right
           li 
             = link_to('Logout <span class="glyphicon glyphicon-log-out"></span>'.html_safe, destroy_user_session_path, :method => :delete)
+        p.navbar-text.navbar-right 
+          | Energy: 
+          = current_user.current_cat.energy
+        p.navbar-text.navbar-right 
+          | Gold: 
+          = current_user.gold
     .container
+      - flash.each do |key, value|
+        = content_tag :div, value, class: "alert #{flash_class(key)}"
       = yield
