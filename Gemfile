@@ -51,6 +51,8 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
+# Models
+gem 'active_hash'
 
 # Deployment
 gem 'capistrano',  '~> 3.1'
