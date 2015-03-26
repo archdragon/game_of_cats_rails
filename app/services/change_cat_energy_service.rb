@@ -1,4 +1,4 @@
-class ChangeCatEnergyService
+class ChangeCatEnergyService < ArchServiceObject
   def self.call(cat:, energy_change:)
     new_amount = cat.energy + energy_change
     raise ServiceError.new("Not enough energy!") if new_amount < 0

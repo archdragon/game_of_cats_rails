@@ -1,5 +1,5 @@
 # Adds his first cat for the user
-class CreateFirstCatService
+class CreateFirstCatService < ServiceObject
   MAX_FUR = 9
   MAX_FACE = 2
   MAX_EYES = 9
