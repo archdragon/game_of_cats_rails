@@ -1,0 +1,6 @@
+= form_for(mission, url: start_mission_path(mission), method: 'post') do |f|
+  .row
+    .col-sm-3
+      strong = mission.name
+    .col-sm-3
+      = f.submit "Start mission!", class: "btn btn-default"
