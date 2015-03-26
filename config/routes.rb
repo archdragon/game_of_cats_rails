@@ -8,8 +8,16 @@ Rails.application.routes.draw do
 
   # resource :city
   resources :user_cats, path: 'cats'
-  resources :missions
-  resources :trainings
+  resources :missions, only: [:index] do
+    member do
+      post 'start', as: 'start'
+    end
+  end
+  resources :trainings, only: [:index] do
+    member do
+      post 'start', as: 'start'
+    end
+  end
   resources :journeys, only: [:index] do
     collection do
       post 'start', as: 'start'
