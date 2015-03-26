@@ -8,4 +8,8 @@ class UserCat < ActiveRecord::Base
   def interest(n)
     self.send("interest#{n}")
   end
+
+  def attribute(n)
+    self.send("attribute#{n}")
+  end
 end
