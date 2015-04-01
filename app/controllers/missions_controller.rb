@@ -3,10 +3,14 @@ class MissionsController < ApplicationController
 
   def index
     @missions = Mission.all
-    @missions.map! { |mission| CatMission.new(cat: current_cat, mission: mission) }
-    logger.debug(@missions)
+    @missions.map! do |mission| 
+      cat_mission = CatMission.new(cat: current_cat, mission: mission)
+      ArchPresenter.present(cat_mission)
+    end
   end
 
   def start
+    response = StartMissionService.call(cat: current_cat, mission_id: params[:id], user: current_user, on_error: :response_object)
+    redirect_to missions_path, flash: response.flash
   end
 end
