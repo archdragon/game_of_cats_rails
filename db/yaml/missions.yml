@@ -1,7 +1,6 @@
 - id: 1
   name: "Mission 1"
   required_attributes:
-    - 1: 0
-      2: 0
-      3: 1
-- id: 2
+    attribute1: 0
+    attribute2: 0
+    attribute3: 9999
