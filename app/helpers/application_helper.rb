@@ -15,6 +15,8 @@ module ApplicationHelper
     case class_name
     when 'notice'
       'alert-info'
+    when 'alert'
+      'alert-danger'
     else
       class_name
     end
