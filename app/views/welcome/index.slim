@@ -32,18 +32,18 @@
         .form-group
           label Cat name
           .input-group
-            input.form-control type="text" value="Mr. Mittens" name="cat[name]"
+            input.form-control type="text" value="Mr. Mittens" name="cat[name]" id="cat-name"
             span class="input-group-addon" id="cat-name-reload"
               span.glyphicon.glyphicon-refresh
         .form-group.text-center
           button#continue-button.btn.btn-lg.btn-success type="button" Continue &raquo;
       #hidden-fields
-        = f.text_field :name
+        = f.text_field :name, label: 'Your login'
         .row
           .col-xs-6
             = f.text_field :password
           .col-xs-6
-            = f.text_field :password_confirmation
+            = f.text_field :password_confirmation, label: 'Confirm password'
   #hidden-form-button.row
     .col-sm-4.col-sm-offset-4.text-center
       = f.submit(class: "btn btn-lg btn-primary", value: "Create Cat!")
