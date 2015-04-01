@@ -5,11 +5,18 @@ class UserCat < ActiveRecord::Base
 
   belongs_to :user
 
+  ACTION_COOLDOWN_IN_SECONDS = 15*60
+
   def interest(n)
     self.send("interest#{n}")
   end
 
   def attribute(n)
     self.send("attribute#{n}")
+  end
+
+  def busy?
+    last_action_time = last_action_at || Date.new(2000,1,1)
+    (Time.now.to_i - last_action_time.to_time.to_i) < ACTION_COOLDOWN_IN_SECONDS
   end
 end
