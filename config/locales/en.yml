@@ -69,11 +69,13 @@ en:
       - "Buttons"
       - "Kitkat"
       - "Sushi"
+      - "Cthulhu"
+      - "Burger"
     double_names:
       part1:
-        - "Squeak"
+        - "Squeaky"
         - "White"
-        - "Fluff"
+        - "Fluffy"
         - "Air"
         - "Potato"
         - "Bubble"
@@ -81,6 +83,9 @@ en:
         - "Loud"
         - "Flea"
         - "Smelly"
+        - "Lazy"
+        - "Silly"
+        - "Poop"
       part2:
         - "paws"
         - "mittens"
