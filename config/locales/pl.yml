@@ -1,0 +1,12 @@
+pl:
+  menu:
+    training: "Trening"
+    relax: "Relaks"
+    cat: "Kot"
+    missions: "Misje"
+  registration:
+    your_name: "Twój login"
+    password: "Hasło"
+    repeat_password: "Powtórz hasło"
+ 
+  
