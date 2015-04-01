@@ -19,7 +19,40 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+
+# Research gravity - knock stuff off the shelf
+# Material engineering - throw the vase down the shelf
+# Liquid movements - faucet
+# Light - catch and interrogate the red dot
 en:
+  attributes:
+    attribute1: "Politics" # begging for food and votes
+    attribute2: "Engineering" # Throwing stuff, knocking things off the shelves
+    attribute3: "Poetry" #includes english literature, poetry and sitting on papers
+  menu:
+    training: "Training"
+    relax: "Relax"
+    cat: "Cat"
+    missions: "Missions"
+  registration:
+    your_name: "Your name"
+    password: "Password"
+    repeat_password: "Repeat password"
+
+  trainings:
+    index:
+      description: "Train your cat to upgrade its attributes"
+  missions:
+    index:
+      description: "Send your cat on a cat mission to get extra cat money!"
+  user_cats:
+    index:
+      description: "Your cat"
+    
+  errors:
+    no_energy: "Yor cat does not have enough energy!"
+    no_attributes: ""
+    
   hello: "Hello world"
   cat_names:
     prefixes:
