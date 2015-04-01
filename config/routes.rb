@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   # resource :city
-  resources :user_cats, path: 'cats'
+  resources :user_cats, path: 'cats' do
+    collection do
+      get 'generate_name'
+    end
+  end
   resources :missions, only: [:index] do
     member do
       post 'start', as: 'start'
@@ -20,6 +24,11 @@ Rails.application.routes.draw do
   end
   resources :journeys, only: [:index] do
     collection do
+      post 'start', as: 'start'
+    end
+  end
+  resources :regenerations, only: [:index] do
+    member do
       post 'start', as: 'start'
     end
   end
