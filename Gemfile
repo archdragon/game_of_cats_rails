@@ -63,3 +63,6 @@ gem 'capistrano-passenger'
 
 # Users, session and registration
 gem 'devise'
+
+# Language detection
+gem 'http_accept_language'
