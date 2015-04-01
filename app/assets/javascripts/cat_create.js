@@ -39,4 +39,10 @@ $(document).ready(function(){
     $("#hidden-fields").slideDown();
     $("#hidden-form-button").fadeIn();
   });
+
+  $("#cat-name-reload").click(function(){
+    $.get("/cats/generate_name.html", function(data) {
+      $("#cat-name").val(data);
+    });
+  });
 })
