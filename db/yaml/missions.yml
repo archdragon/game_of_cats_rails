@@ -1,6 +1,81 @@
 - id: 1
-  name: "Mission 1"
+  name: "evade_taxes"
+  required_attributes:
+    attribute1: 1
+    attribute2: 0
+    attribute3: 0
+  gold:
+    from: 1
+    to: 3
+- id: 2
+  name: "watch_cat_videos"
+  required_attributes:
+    attribute1: 0
+    attribute2: 1
+    attribute3: 0
+  gold:
+    from: 1
+    to: 3
+- id: 3
+  name: "memorize_the_phonebook"
   required_attributes:
     attribute1: 0
     attribute2: 0
-    attribute3: 9999
+    attribute3: 1
+  gold:
+    from: 1
+    to: 3
+- id: 4
+  name: "smuggle_catnip"
+  required_attributes:
+    attribute1: 10
+    attribute2: 0
+    attribute3: 0
+  gold:
+    from: 5
+    to: 15
+- id: 5
+  name: "build_perpetuum_mobile"
+  required_attributes:
+    attribute1: 0
+    attribute2: 10
+    attribute3: 0
+  gold:
+    from: 5
+    to: 15
+- id: 6
+  name: "read_50_shades_of_cat"
+  required_attributes:
+    attribute1: 0
+    attribute2: 0
+    attribute3: 10
+  gold:
+    from: 5
+    to: 15
+- id: 7
+  name: "meet_the_world_leaders"
+  required_attributes:
+    attribute1: 30
+    attribute2: 0
+    attribute3: 0
+  gold:
+    from: 20
+    to: 35
+- id: 8
+  name: "catch_the_red_dot"
+  required_attributes:
+    attribute1: 0
+    attribute2: 30
+    attribute3: 0
+  gold:
+    from: 20
+    to: 35
+- id: 9
+  name: "write_harry_potter_fanfiction"
+  required_attributes:
+    attribute1: 0
+    attribute2: 0
+    attribute3: 30
+  gold:
+    from: 20
+    to: 35
