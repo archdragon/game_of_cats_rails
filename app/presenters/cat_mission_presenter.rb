@@ -1,0 +1,3 @@
+class CatMissionPresenter < SimpleDelegator
+  
+end
