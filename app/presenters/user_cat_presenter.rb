@@ -20,4 +20,8 @@ class UserCatPresenter < SimpleDelegator
   def attribute_sum
     (1..3).to_a.inject(0) { |sum, n|  sum += self.send("attribute", n) }
   end
+
+  def energy_bar_width
+    (energy/max_energy.to_f)*100.0
+  end
 end
