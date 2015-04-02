@@ -4,7 +4,7 @@ class CreateFirstCatService < ArchServiceObject
   MAX_FACE = 2
   MAX_EYES = 9
 
-  def self.call(user:, cat_params:)
+  def self.body(user:, cat_params:)
     fur = Integer(cat_params.fetch(:fur, 0))
     eyes = Integer(cat_params.fetch(:eyes, 0))
     face = Integer(cat_params.fetch(:face, 0))
