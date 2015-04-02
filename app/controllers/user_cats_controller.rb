@@ -1,5 +1,6 @@
 class UserCatsController < ApplicationController
   layout "logged_in"
+  before_action :authenticate_user!, except: [:generate_name]
 
   def show
     @cat = ArchPresenter.present(current_cat)
