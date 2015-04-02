@@ -6,6 +6,7 @@ html
     = javascript_include_tag 'application'
     = csrf_meta_tags
   body
+    = render partial: "shared/facebook/js"
     nav.navbar.navbar-inverse
       .container
         .navbar-header
@@ -17,3 +18,5 @@ html
         = content_tag :div, value, class: "alert #{flash_class(key)}"
     .container
       = yield
+    .facebook-logged-out
+      = render partial: "shared/facebook/button"
