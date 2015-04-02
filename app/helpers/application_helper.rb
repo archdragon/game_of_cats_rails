@@ -17,6 +17,8 @@ module ApplicationHelper
       'alert-info'
     when 'alert'
       'alert-danger'
+    when 'error'
+      'alert-danger'
     else
       class_name
     end
