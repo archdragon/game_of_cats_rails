@@ -1,0 +1,6 @@
+= form_for(regeneration, url: start_regeneration_path(regeneration), method: 'post') do |f|
+  .row
+    .col-sm-3
+      strong = t("regenerations.#{regeneration.name}")
+    .col-sm-3
+      = f.submit "Relax!", class: "btn btn-default"
