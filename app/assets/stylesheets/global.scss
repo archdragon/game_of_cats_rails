@@ -2,3 +2,11 @@ body {
   background-image: asset-url('backgrounds/white_paperboard/white_paperboard.png');
   font-family: 'Lato', sans-serif;
 }
+
+.controller-description {
+  margin-bottom: 2em;
+}
+
+.edit_mission:nth-child(3n+2) {
+  margin-bottom: 1em;
+}
