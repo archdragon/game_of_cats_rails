@@ -6,35 +6,36 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  # resource :city
-  resources :user_cats, path: 'cats' do
-    collection do
-      get 'generate_name'
+  authenticate :user do
+    resources :user_cats, path: 'cats' do
+      collection do
+        get 'generate_name'
+      end
     end
-  end
-  resources :missions, only: [:index] do
-    member do
-      post 'start', as: 'start'
+    resources :missions, only: [:index] do
+      member do
+        post 'start', as: 'start'
+      end
     end
-  end
-  resources :trainings, only: [:index] do
-    member do
-      post 'start', as: 'start'
+    resources :trainings, only: [:index] do
+      member do
+        post 'start', as: 'start'
+      end
     end
-  end
-  resources :journeys, only: [:index] do
-    collection do
-      post 'start', as: 'start'
+    resources :journeys, only: [:index] do
+      collection do
+        post 'start', as: 'start'
+      end
     end
-  end
-  resources :regenerations, only: [:index] do
-    member do
-      post 'start', as: 'start'
+    resources :regenerations, only: [:index] do
+      member do
+        post 'start', as: 'start'
+      end
     end
-  end
-  resources :items, only: [:index] do
-    collection do
-      post 'eat', as: 'eat'
+    resources :items, only: [:index] do
+      collection do
+        post 'eat', as: 'eat'
+      end
     end
   end
 
