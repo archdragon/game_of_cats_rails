@@ -1,5 +1,5 @@
 = bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  h1 Create a cat!
+  h1 = t '.create_cat'
   #cat-create
     .cat-appearance
       img.setting-image-fur src="/public_images/appearance/fur/0.png"
@@ -30,20 +30,22 @@
     .col-sm-4.col-sm-offset-4.registration-form
       fieldset
         .form-group
-          label Cat name
+          label = t '.cat_name'
           .input-group
             input.form-control type="text" value="Mr. Mittens" name="cat[name]" id="cat-name"
             span class="input-group-addon" id="cat-name-reload"
               span.glyphicon.glyphicon-refresh
         .form-group.text-center
-          button#continue-button.btn.btn-lg.btn-success type="button" Continue &raquo;
+          button#continue-button.btn.btn-lg.btn-success type="button"
+            = t '.continue'
+            |  &raquo;
       #hidden-fields
-        = f.text_field :name, label: 'Your login'
+        = f.text_field :name, label: t('.your_login')
         .row
           .col-xs-6
-            = f.text_field :password
+            = f.text_field :password, label: t('.password')
           .col-xs-6
-            = f.text_field :password_confirmation, label: 'Confirm password'
+            = f.text_field :password_confirmation, label: t('.confirm_pasword')
   #hidden-form-button.row
     .col-sm-4.col-sm-offset-4.text-center
-      = f.submit(class: "btn btn-lg btn-primary", value: "Create Cat!")
+      = f.submit(class: "btn btn-lg btn-primary", value: t('.create_cat'))

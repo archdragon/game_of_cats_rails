@@ -25,34 +25,56 @@
 # Liquid movements - faucet
 # Light - catch and interrogate the red dot
 en:
+  log_in: "Log in!"
+  welcome:
+    index:
+      create_cat: "Create a cat!"
+      cat_name: "Cat name"
+      continue: "Continue"
+      your_login: "Your login"
+      password: "Password"
+      confirm_password: "Confirm password"
   attributes:
     attribute1: "Politics" # begging for food and votes
     attribute2: "Engineering" # Throwing stuff, knocking things off the shelves
-    attribute3: "Poetry" #includes english literature, poetry and sitting on papers
+    attribute3: "Literature" #includes english literature, poetry and sitting on papers
   menu:
     training: "Training"
     relax: "Relax"
     cat: "Cat"
     missions: "Missions"
-  registration:
-    your_name: "Your name"
-    password: "Password"
-    repeat_password: "Repeat password"
-
   trainings:
     index:
       description: "Train your cat to upgrade its attributes"
+    training1: "Beg for food (and votes)"
+    training1_description: "Train politics"
+    training2: "Knocks thing off the table"
+    training2_description: "Perform a science experiment and train engineering"
+    training3: "Sit on some papers"
+    training3_description: "Train literature"
+  regenerations:
+    tiny_box: "Hide in a tiny box"
+    nap: "Take a short nap"
+    eat: "Eat random small things"
   missions:
     index:
       description: "Send your cat on a cat mission to get extra cat money!"
+    evade_taxes: "Evade taxes"
+    watch_cat_videos: "Watch cat videos"
+    memorize_the_phonebook: "Memorize the phonebook"
+    smuggle_catnip: "Smuggle catnip"
+    build_perpetuum_mobile: "Build perpetuum mobile"
+    read_50_shades_of_cat: "Read '50 Shades of Cat'"
+    meet_the_world_leaders: "Meet the world leaders"
+    catch_the_red_dot: "Catch the red dot"
+    write_harry_potter_fanfiction: "Write Harry Potter fanfiction"
   user_cats:
     index:
       description: "Your cat"
-    
+      statistics: "Statystyki"
   errors:
     no_energy: "Yor cat does not have enough energy!"
     no_attributes: ""
-    
   hello: "Hello world"
   cat_names:
     prefixes:
