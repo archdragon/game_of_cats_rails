@@ -43,9 +43,9 @@
         = f.text_field :name, label: t('.your_login')
         .row
           .col-xs-6
-            = f.text_field :password, label: t('.password')
+            = f.password_field :password, label: t('.password')
           .col-xs-6
-            = f.text_field :password_confirmation, label: t('.confirm_pasword')
+            = f.password_field :password_confirmation, label: t('.confirm_pasword')
   #hidden-form-button.row
     .col-sm-4.col-sm-offset-4.text-center
       = f.submit(class: "btn btn-lg btn-primary", value: t('.create_cat'))
