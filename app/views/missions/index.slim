@@ -1,2 +1,12 @@
 h2 Missions
-= render partial: @missions, spacer_template: 'shared/spacer'
+
+p.controller-description Earn gold by sending your cat on a mission.
+
+.row
+  .col-sm-3 Mission name
+  .col-sm-6 Requirements
+
+= render 'shared/spacer'
+
+#missions
+  = render partial: @missions, spacer_template: 'shared/spacer'
