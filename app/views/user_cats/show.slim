@@ -3,22 +3,23 @@
     h2 = @cat.name
     = render partial: "shared/cat", object: @cat
   .col-sm-6
-    h2 Stats
+    h2 = t '.statistics'
     .row
       .col-xs-4
         | Energy
       .col-xs-8
         .progress
-          .progress-bar.progress-bar-warning.progress-bar-striped role="progressbar" style="width: 60%;"
+          .progress-bar.progress-bar-warning.progress-bar-striped role="progressbar" style="width: #{@cat.energy_bar_width}%;"
+            = @cat.energy
     h2 Attributes
     - (1..3).each do |n|
       .row
         .col-xs-4
-          | Attribute #{n}: 
-          = @cat.attribute(n)
+          = t "attributes.attribute#{n}"
         .col-xs-8
           .progress
             .progress-bar.progress-bar-striped role="progressbar" style="width: #{@cat.attribute_bar_width(n)}%;"
+              = @cat.attribute(n)
 
 .row
   .col-sm-12
