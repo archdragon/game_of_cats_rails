@@ -14,16 +14,16 @@ class CreateFirstCatService < ArchServiceObject
     eyes = 0 if eyes > MAX_EYES || eyes < 0
 
     if user.persisted?
-      random_hobbies = self.get_random_hobbies
+      random_hobbies = get_random_hobbies
 
       cat = UserCat.new(name: cat_params[:name], 
         fur: fur, 
         eyes: eyes, 
         face: face, 
         user: user,
-        interest1: random_hobbies.shift[0],
-        interest2: random_hobbies.shift[0],
-        interest3: random_hobbies.shift[0])
+        interest1: random_hobbies[0],
+        interest2: random_hobbies[1],
+        interest3: random_hobbies[2])
 
       cat.name = "Cat" unless cat.valid?
       cat.save
@@ -31,6 +31,6 @@ class CreateFirstCatService < ArchServiceObject
   end
 
   def self.get_random_hobbies
-    I18n.t(:interests).to_a.sample(3).to_h
+    (1..26).to_a.sample(3)
   end
 end
