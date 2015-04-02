@@ -7,7 +7,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     super
-    CreateFirstCatService.call(cat_params: params[:cat], user: resource)
+    CreateFirstCatService.call(cat_params: params[:cat], user: resource, on_error: :response_object)
   end
 
   def update
