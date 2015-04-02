@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Cat
+    title Game of Cats
     = stylesheet_link_tag 'application', madia: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -13,8 +13,8 @@ html
         ul.nav.navbar-nav
           li = link_to('Cat', user_cat_path(current_cat))
           li = link_to('Training', trainings_path)
-          li = link_to('Journey', journeys_path)
           li = link_to('Missions', missions_path)
+          li = link_to('Relax', regenerations_path)
         ul.nav.navbar-nav.navbar-right
           li 
             = link_to('Logout <span class="glyphicon glyphicon-log-out"></span>'.html_safe, destroy_user_session_path, :method => :delete)
