@@ -1,0 +1,6 @@
+class CheckCatAttributesService < ArchServiceObject
+  def self.body(cat:, required_attributes:)
+    valid_attributes = (1..3).select { |n| cat.attribute(n) >= required_attributes.fetch("attribute#{n}").to_i }
+    raise ServiceError.new("Your cat does not meet the requirements for this mission!") if valid_attributes.count < 3
+  end
+end
