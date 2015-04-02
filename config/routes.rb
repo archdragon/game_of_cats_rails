@@ -6,12 +6,14 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  authenticate :user do
-    resources :user_cats, path: 'cats' do
-      collection do
-        get 'generate_name'
-      end
+
+  resources :user_cats, path: 'cats' do
+    collection do
+      get 'generate_name'
     end
+  end
+
+  authenticate :user do
     resources :missions, only: [:index] do
       member do
         post 'start', as: 'start'
