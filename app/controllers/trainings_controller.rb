@@ -7,7 +7,7 @@ class TrainingsController < ApplicationController
   end
 
   def start
-    response = StartTrainingService.call(cat: current_cat, training_id: params[:id], user: current_user, on_error: :response_object)
+    response = StartTrainingService.call(cat: current_cat, training_id: params[:id], user: current_user)
     redirect_to trainings_path, flash: response.flash
   end
 end

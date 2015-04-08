@@ -4,6 +4,6 @@ class RegenerateCatEnergyService < ArchServiceObject
   def self.body(cat:)
     raise ServiceError.new("Your cat can relax only once every 15 minutes!") if cat.busy?
     cat.update_attributes(last_action_at: Time.now)
-    ChangeCatEnergyService.call(cat: cat, energy_change: ENERGY_CHANGE)
+    ChangeCatEnergyService.call!(cat: cat, energy_change: ENERGY_CHANGE)
   end
 end

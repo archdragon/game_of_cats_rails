@@ -6,7 +6,7 @@ class RegenerationsController < ApplicationController
   end
 
   def start
-    response = RegenerateCatEnergyService.call(cat: current_cat, on_error: :response_object)
+    response = RegenerateCatEnergyService.call(cat: current_cat)
     redirect_to regenerations_path, flash: response.flash
   end
 end
