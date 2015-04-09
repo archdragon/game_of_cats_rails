@@ -20,3 +20,21 @@ body {
 .facebook {
   margin-top: 5em;
 }
+
+.button-cathead::after {
+  background-image: asset_url('buttons/cat_face.png');
+  background-position: 0px -40px;
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  @include transition(background-position 0.3s 1s ease-in);
+}
+
+.button-cathead:hover::after {
+  background-position: 0px 0px;
+  @include transition(background-position 0.3s ease-out);
+}
