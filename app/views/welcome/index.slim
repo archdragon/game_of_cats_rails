@@ -40,7 +40,7 @@
             = t '.continue'
             |  &raquo;
       #hidden-fields
-        = f.text_field :name, label: t('.your_login')
+        = f.text_field :name, label: t('.your_login'), id: "registration-name"
         .row
           .col-xs-6
             = f.password_field :password, label: t('.password')
@@ -48,4 +48,4 @@
             = f.password_field :password_confirmation, label: t('.confirm_pasword')
   #hidden-form-button.row
     .col-sm-4.col-sm-offset-4.text-center
-      = f.submit(class: "btn btn-lg btn-primary", value: t('.create_cat'))
+      = f.submit(class: "btn btn-lg btn-primary", id: "button-create-cat", value: t('.create_cat'))
