@@ -1,4 +1,4 @@
-class GenerateCatNameService < ArchServiceObject
+class GenerateCatNameService < ArchService::ServiceObject
   def self.call
     cat_name = ""
     if (1..7).to_a.sample == 1

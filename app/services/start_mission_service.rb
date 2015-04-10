@@ -1,4 +1,4 @@
-class StartMissionService < ArchServiceObject
+class StartMissionService < ArchService::ServiceObject
   ENERGY_CHANGE = -10
 
   def self.body(user:, cat:, mission_id:)
@@ -6,6 +6,6 @@ class StartMissionService < ArchServiceObject
     ChangeCatEnergyService.call!(cat: cat, energy_change: ENERGY_CHANGE)
     CheckCatAttributesService.call!(cat: cat, required_attributes: mission.required_attributes)
     ChangeUserGoldService.call!(user: user, gold_change: mission.awarded_gold)
-    ServiceResponse.new(message: "Mission accomplished!", success: true)
+    respond(message: "Mission accomplished!", success: true)
   end
 end

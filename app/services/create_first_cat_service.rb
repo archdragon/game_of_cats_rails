@@ -1,5 +1,5 @@
 # Adds his first cat for the user
-class CreateFirstCatService < ArchServiceObject
+class CreateFirstCatService < ArchService::ServiceObject
   MAX_FUR = 9
   MAX_FACE = 2
   MAX_EYES = 9
