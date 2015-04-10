@@ -1,4 +1,4 @@
-class StartTrainingService < ArchServiceObject
+class StartTrainingService < ArchService::ServiceObject
   ENERGY_CHANGE = -10
 
   def self.body(user:, cat:, training_id:)
@@ -8,6 +8,6 @@ class StartTrainingService < ArchServiceObject
 
     cat.increment!("attribute#{cat_training.attribute_id}")
 
-    ServiceResponse.new(message: "Skill trained!", success: true)
+    respond(message: "Skill trained!", success: true)
   end
 end
