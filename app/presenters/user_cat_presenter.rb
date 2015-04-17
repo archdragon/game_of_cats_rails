@@ -17,11 +17,35 @@ class UserCatPresenter < SimpleDelegator
     (attribute(attribute_id)/attribute_sum.to_f)*100.0
   end
 
+  def attributes
+    (1..3).to_a.inject([]) do |sum, id|
+      sum << {
+        value: self.send("attribute", id),
+        id: id,
+        name: I18n.t("attributes.attribute#{id}"),
+        width_style: "width: #{attribute_bar_width(id)}%"
+      }
+    end
+  end
+
+  def interests
+    (1..3).to_a.inject([]) do |sum, id|
+      sum << {
+        value: interest(id),
+        name: I18n.t("interests.#{interest(id)}")
+      }
+    end
+  end
+
   def attribute_sum
     (1..3).to_a.inject(0) { |sum, n|  sum += self.send("attribute", n) }
   end
 
   def energy_bar_width
     (energy/max_energy.to_f)*100.0
+  end
+
+  def energy_bar_width_style
+    "width: #{energy_bar_width}%"
   end
 end
