@@ -10,9 +10,17 @@ gem 'sass-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'slim'
 gem 'bootstrap_form'
- gem 'compass-rails', github: "Compass/compass-rails"
+gem 'compass-rails', github: "Compass/compass-rails"
 
 gem 'tzinfo-data'
+
+# Ember JS framework
+gem 'ember-rails'
+gem 'ember-source', '~> 1.11.1'
+gem 'emblem-rails' # Slim-like template language
+gem "emblem-source", github: "machty/emblem.js"
+
+gem 'hamlbars', '~> 2.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
