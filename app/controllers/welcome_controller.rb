@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    redirect_to user_cat_path(current_cat) if user_signed_in?
+    render template: "/welcome/static", layout: "logged_in" if user_signed_in?
   end
 end
