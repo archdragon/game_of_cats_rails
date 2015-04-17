@@ -1,9 +1,10 @@
 class MissionsController < ApplicationController
-  layout "logged_in"
+  layout false
+  respond_to :json
 
   def index
     @missions = Mission.all
-    @missions.map! do |mission| 
+    @missions.map! do |mission|
       cat_mission = CatMission.new(cat: current_cat, mission: mission)
       ArchPresenter.present(cat_mission)
     end

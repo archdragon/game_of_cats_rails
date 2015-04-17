@@ -1,5 +1,6 @@
 class TrainingsController < ApplicationController
-  layout "logged_in"
+  layout false
+  respond_to :json
 
   def index
     @trainings = Training.all

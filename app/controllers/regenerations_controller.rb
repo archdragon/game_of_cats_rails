@@ -1,8 +1,12 @@
 class RegenerationsController < ApplicationController
-  layout "logged_in"
+  layout false
+  respond_to :json
 
   def index
     @regenerations = Regeneration.all
+    @regenerations.map! do |regeneration|
+      ArchPresenter.present(regeneration)
+    end
   end
 
   def start
