@@ -7,9 +7,13 @@ function pause_video(selector){
 }
 
 $(document).ready(function(){
-  $(".header-video-activator").hover(function(){
-    play_video($("#header-video"));
-  }, function(){
-    pause_video($("#header-video"));
+  $(".header-video-activator").on({
+    mouseenter: function(){
+      alert("c");
+      play_video($("#header-video"));
+    },
+    mouseleave: function(){
+      pause_video($("#header-video"));
+    }
   });
 });
