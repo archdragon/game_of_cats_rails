@@ -19,6 +19,7 @@
 //= require ember-data
 //= require_self
 //= require cat_create
+//= require logged_in
 //= require ./cat
 
 // for more details see: http://emberjs.com/guides/application/
