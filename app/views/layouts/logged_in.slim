@@ -8,7 +8,7 @@ html
     = csrf_meta_tags
   body
     = render partial: "shared/facebook/js"
-    script type="text/x-handlebars"
+    script type="text/x-handlebars" data-template-name='header'
       nav.navbar.navbar-inverse
         .container
           .navbar-header
@@ -29,11 +29,14 @@ html
               = link_to('Logout <span class="glyphicon glyphicon-log-out"></span>'.html_safe, destroy_user_session_path, :method => :delete)
           p.navbar-text.navbar-right 
             | Energy: 
-            = current_user.current_cat.energy
+            |{{cat_energy}}
           p.navbar-text.navbar-right 
             | Gold: 
-            = current_user.gold
+            |{{gold}}
+    script type="text/x-handlebars"
+      | {{render 'header'}}
       .container
-        - flash.each do |key, value|
-          = content_tag :div, value, class: "alert #{flash_class(key)}"
+        p
+          | Gold: 
+          |{{controller.gold}} {{gold}}
         | {{outlet}}
