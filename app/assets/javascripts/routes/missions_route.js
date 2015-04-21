@@ -1,4 +1,4 @@
-Cat.TrainingsRoute = Ember.Route.extend({
+Cat.MissionsRoute = Ember.Route.extend({
   model: function() {
     return this.store.find('mission');
   }
