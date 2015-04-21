@@ -1,1 +1,21 @@
-%h2 Test
+= hb 'view Cat.FlashView'
+
+%video{ loop: "loop", id: "header-video" }
+  %source{ src: "animations/mission.webm", type: "video/webm" }
+
+%h2 Missions
+%p.controller-description Regenerate some energy. Your cat can relax once every 15 minutes.
+%div.row.spacer
+  %div.col-xs-12
+
+= hb 'each mission in controller' do
+  %div.row
+    %div.col-sm-3
+      %strong
+        = hb 'mission.translated_name'
+    %div.col-sm-6
+      
+    %div.col-sm-3
+      = hb 'action-button', action: 'start'
+  %div.row.spacer
+    %div.col-xs-12

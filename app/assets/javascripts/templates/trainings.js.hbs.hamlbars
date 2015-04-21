@@ -1,0 +1,26 @@
+= hb 'view Cat.FlashView'
+
+%video{ loop: "loop", id: "header-video" }
+  %source{ src: "animations/training.webm", type: "video/webm" }
+
+%h2 Training
+%p.controller-description Training will raise a selected statistic, but at the same time it will cost your cat 10 energy.
+%div.row.spacer
+  %div.col-xs-12
+
+= hb 'each training in controller' do
+  %div.row
+    %div.col-sm-4
+      %strong
+        = hb 'training.translated_name'
+      %p
+        = hb 'training.translated_description'
+    %div.col-sm-1
+    %div.col-sm-2
+      %span
+        Cost:
+        = hb 'training.cost'
+    %div.col-sm-2
+      = hb 'action-button', action: 'start'
+  %div.row.spacer
+    %div.col-xs-12

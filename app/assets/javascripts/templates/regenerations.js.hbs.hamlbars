@@ -1,8 +1,12 @@
+= hb 'view Cat.FlashView'
+
 %video{ loop: "loop", id: "header-video" }
   %source{ src: "animations/relax.webm", type: "video/webm" }
 
 %h2 Relax
 %p.controller-description Regenerate some energy. Your cat can relax once every 15 minutes.
+%div.row.spacer
+  %div.col-xs-12
 
 = hb 'each relax in controller' do
   %div.row
@@ -10,6 +14,6 @@
       %strong
         = hb 'relax.translated_name'
     %div.col-sm-3
-      %button.btn.btn-default.header-video-activator Relax!
+      = hb 'action-button', action: 'start'
   %div.row.spacer
     %div.col-xs-12
