@@ -4,7 +4,10 @@ class TrainingsController < ApplicationController
 
   def index
     @trainings = Training.all
-    @trainings.map! { |training| CatTraining.new(cat: current_cat, training: training) }
+    @trainings.map! do |training|
+      cat_training = CatTraining.new(cat: current_cat, training: training)
+      cat_training = ArchPresenter.present(cat_training)
+    end
   end
 
   def start
