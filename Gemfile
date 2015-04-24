@@ -72,3 +72,7 @@ gem 'devise'
 
 # Language detection
 gem 'http_accept_language'
+
+# Generating random things like words, emails etc.
+gem 'forgery', '0.6.0'
+gem 'bazaar'
