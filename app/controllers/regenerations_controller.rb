@@ -10,7 +10,7 @@ class RegenerationsController < ApplicationController
   end
 
   def start
-    @response = RegenerateCatEnergyService.call(cat: current_cat)
-    render json: @response
+    response = RegenerateCatEnergyService.call(cat: current_cat)
+    render json: response
   end
 end
