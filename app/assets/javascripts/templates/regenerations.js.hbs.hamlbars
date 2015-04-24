@@ -1,7 +1,9 @@
 = hb 'view Cat.FlashView'
 
-%video{ loop: "loop", id: "header-video" }
-  %source{ src: "animations/relax.webm", type: "video/webm" }
+= hb 'header-video source="animations/relax.webm" isPlaying=isVideoPlaying action="playVideo"'
+
+%h3
+  = hb 'isVideoPlaying'
 
 %h2 Relax
 %p.controller-description Regenerate some energy. Your cat can relax once every 15 minutes.
@@ -14,6 +16,6 @@
       %strong
         = hb 'relax.translated_name'
     %div.col-sm-3
-      = hb 'action-button', action: 'start'
+      = hb "action-button submit='start' on='playVideo' off='pauseVideo' actionName='Relax!' actionId=relax.id"
   %div.row.spacer
     %div.col-xs-12

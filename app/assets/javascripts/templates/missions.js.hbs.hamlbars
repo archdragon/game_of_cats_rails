@@ -4,7 +4,7 @@
   %source{ src: "animations/mission.webm", type: "video/webm" }
 
 %h2 Missions
-%p.controller-description Regenerate some energy. Your cat can relax once every 15 minutes.
+%p.controller-description Earn gold by sending your cat on a mission.
 %div.row.spacer
   %div.col-xs-12
 
@@ -14,8 +14,7 @@
       %strong
         = hb 'mission.translated_name'
     %div.col-sm-6
-      
     %div.col-sm-3
-      = hb 'action-button', action: 'start'
+      = hb "action-button submit='start' on='playVideo' off='pauseVideo' actionName='Start!' actionId=mission.id"
   %div.row.spacer
     %div.col-xs-12

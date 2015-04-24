@@ -21,6 +21,6 @@
         Cost:
         = hb 'training.cost'
     %div.col-sm-2
-      = hb 'action-button', action: 'start'
+      = hb "action-button submit='start' on='playVideo' off='pauseVideo' actionName='Train!' actionId=training.id"
   %div.row.spacer
     %div.col-xs-12
