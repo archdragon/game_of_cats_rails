@@ -41,11 +41,11 @@
             |  &raquo;
       #hidden-fields
         = f.text_field :name, label: t('.your_login'), id: "registration-name"
-        .row
-          .col-xs-6
-            = f.password_field :password, label: t('.password')
-          .col-xs-6
-            = f.password_field :password_confirmation, label: t('.confirm_pasword')
+      #hidden-password
+        .col-xs-6
+          input type="text" name="user[password]" value="#{@default_password}"
+        .col-xs-6
+          input type="text" name="user[password_confirmation]" value="#{@default_password}"
   #hidden-form-button.row
     .col-sm-4.col-sm-offset-4.text-center
       = f.submit(class: "btn btn-lg btn-primary", id: "button-create-cat", value: t('.create_cat'))
