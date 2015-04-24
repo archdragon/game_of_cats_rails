@@ -33,7 +33,15 @@ html
           p.navbar-text.navbar-right 
             | Gold: 
             |{{gold}}
+
     script type="text/x-handlebars"
       | {{render 'header'}}
       .container
         | {{outlet}}
+      #password-info.container
+        .row
+          .col-sm-12
+            p We generated a password for you. It allows you to enter the game from other browsers and devices!
+            p Your password:
+            p
+              strong =current_user.public_password
