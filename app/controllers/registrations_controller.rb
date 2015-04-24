@@ -8,9 +8,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     super
 
-    resource.public_password = params[:user][:password]
-    resource.save!
-
+    resource.update_attribute('public_password', params[:user][:password])
     CreateFirstCatService.call(cat_params: params[:cat], user: resource)
   end
 
