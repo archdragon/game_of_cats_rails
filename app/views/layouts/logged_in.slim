@@ -12,7 +12,7 @@ html
       nav.navbar.navbar-inverse
         .container
           .navbar-header
-            a.navbar-brand href="/" Game of Cats
+            |{{#link-to 'cat' classNames='navbar-brand'}}Game of Cats{{/link-to}}
           ul.nav.navbar-nav
             li
               |{{#link-to 'cat'}}Cat{{/link-to}}
@@ -36,7 +36,4 @@ html
     script type="text/x-handlebars"
       | {{render 'header'}}
       .container
-        p
-          | Gold: 
-          |{{controller.gold}} {{gold}}
         | {{outlet}}
